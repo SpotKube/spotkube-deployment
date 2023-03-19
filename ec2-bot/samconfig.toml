@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "spotkube-deployment"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-11w6zhtfaq1x3"
+s3_prefix = "spotkube-deployment"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
