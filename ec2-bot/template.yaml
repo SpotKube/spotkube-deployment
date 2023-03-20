@@ -24,7 +24,7 @@ Resources:
       Runtime: nodejs16.x
       Architectures:
         - x86_64
-      Handler: src/handlers/scheduled-event-logger.scheduledEventLoggerHandler
+      Handler: src/handlers/scheduled-event-logger.handler
       # This property associates this Lambda function with a scheduled CloudWatch Event. For all available properties, see
       # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule
       # This example runs every hour.
@@ -32,6 +32,6 @@ Resources:
         CloudWatchEvent:
           Type: Schedule
           Properties:
-            Schedule: cron(0 0,10,17,21 * * ? *)
+            Schedule: cron(0 0,10iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii,17,21 * * ? *)
       MemorySize: 128
       Timeout: 100
