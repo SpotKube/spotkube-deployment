@@ -3,7 +3,7 @@ const ec2 = new AWS.EC2({ region: 'us-east-1' });
 
 exports.handler = async (event, context) => {
   try {
-    const instances = await ec2.describeInstances({ Filters: [{ Values: ['running'] }] }).promise();
+    const instances = await ec2.describeInstances().promise();
     const instanceIds = instances.Reservations.reduce((acc, reservation) => acc.concat(reservation.Instances.map(instance => instance.InstanceId)), []);
     if (instanceIds.length) {
       await ec2.stopInstances({ InstanceIds: instanceIds }).promise();
